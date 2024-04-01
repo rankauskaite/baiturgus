@@ -4,10 +4,10 @@ import { stripe } from './lib/stripe'
 import type Stripe from 'stripe'
 import { getPayloadClient } from './get-payload'
 import { Product } from './payload-types'
-import { Resend } from "resend"
+//import { Resend } from "resend"
 import { ReceiptEmailHtml } from './components/emails/ReceiptEmail'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+//const resend = new Resend(process.env.RESEND_API_KEY)
 
 export const stripeWebhookHandler = async (
   req: express.Request,
@@ -97,23 +97,23 @@ export const stripeWebhookHandler = async (
     })
 
     // send receipt
-    try {
-      const data = await resend.emails.send({
-        from: 'DigitalHippo <hello@joshtriedcoding.com>',
-        to: [user.email],
-        subject:
-          'Thanks for your order! This is your receipt.',
-        html: ReceiptEmailHtml({
-          date: new Date(),
-          email: user.email,
-          orderId: session.metadata.orderId,
-          products: order.products as Product[],
-        }),
-      })
-      res.status(200).json({ data })
-    } catch (error) {
-      res.status(500).json({ error })
-    }
+    // try {
+    //   const data = await resend.emails.send({
+    //     from: 'BaiTurgus <onboarding@resend.dev>',
+    //     to: [user.email],
+    //     subject:
+    //       'Thank You for Your order! This is Your receipt.',
+    //     html: ReceiptEmailHtml({
+    //       date: new Date(),
+    //       email: user.email,
+    //       orderId: session.metadata.orderId,
+    //       products: order.products as Product[],
+    //     }),
+    //   })
+    //   res.status(200).json({ data })
+    // } catch (error) {
+    //   res.status(500).json({ error })
+    // }
   }
 
   return res.status(200).send()
