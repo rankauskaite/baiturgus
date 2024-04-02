@@ -136,7 +136,7 @@ exports.ProductFiles = {
     upload: {
         staticURL: "/product_files",
         staticDir: "product_files",
-        mimeTypes: ["image/*", "font/*", "application/pdf", "application/zip"]
+        mimeTypes: ["image/*", "font/*", "application/*"]
     },
     fields: [
         {
