@@ -29,7 +29,7 @@ exports.default = (0, config_1.buildConfig)({
         meta: {
             titleSuffix: "- BaiTurgus",
             favicon: "/favicon.ico",
-            ogImage: "/thumbnail.jpg",
+            ogImage: "/baiturgus_transpagent.png",
         },
     },
     rateLimit: {
