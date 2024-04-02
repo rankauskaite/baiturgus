@@ -26,7 +26,7 @@ export default buildConfig({
         meta: {
             titleSuffix: "- BaiTurgus",
             favicon: "/favicon.ico",
-            ogImage: "/thumbnail.jpg",
+            ogImage: "/baiturgus_transpagent.png",
         },
     },
     rateLimit: {
