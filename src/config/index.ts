@@ -3,37 +3,37 @@ export const PRODUCT_CATEGORIES = [
         label: 'E-books',
         value: 'e-books' as const,
         href: `/products?category=e-books`,
-        imageSrc: '/nav/icons/picks.jpg',
+        imageSrc: '/nav/icons/e_books.png',
     },
     {
         label: 'Games',
         value: 'games' as const,
         href: `/products?category=games`,
-        imageSrc: '/nav/icons/picks.jpg',
+        imageSrc: '/nav/icons/games.jpg',
     },
     {
         label: '3D models',
         value: '3d-models' as const,
         href: `/products?category=3d-models`,
-        imageSrc: '/nav/icons/picks.jpg',
+        imageSrc: '/nav/icons/3d.jpg',
     },
     {
         label: 'Icons',
         value: 'icons' as const,
         href: `/products?category=icons`,
-        imageSrc: '/nav/icons/picks.jpg',
+        imageSrc: '/nav/icons/cat.jpg',
     },
     {
         label: 'Music',
         value: 'music' as const,
         href: `/products?category=music`,
-        imageSrc: '/nav/icons/picks.jpg',
+        imageSrc: '/nav/icons/music.jpg',
     },
     {
         label: 'Templates',
         value: 'templates' as const,
         href: `/products?category=templates`,
-        imageSrc: '/nav/icons/picks.jpg',
+        imageSrc: '/nav/icons/skull.jpg',
     },
 ]
 
