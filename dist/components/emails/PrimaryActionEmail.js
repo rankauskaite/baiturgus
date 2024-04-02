@@ -44,7 +44,7 @@ var EmailTemplate = function (_a) {
         React.createElement(components_1.Preview, null, "The marketplace for high-quality digital goods."),
         React.createElement(components_1.Body, { style: main },
             React.createElement(components_1.Container, { style: container },
-                React.createElement(components_1.Img, { src: "".concat(process.env.NEXT_PUBLIC_SERVER_URL, "/hippo-newsletter-sign-up.png"), width: '150', height: '150', alt: 'BaiTurgus', style: logo }),
+                React.createElement(components_1.Img, { src: "/baiturgus_transparent.png", width: '150', height: '150', alt: 'BaiTurgus', style: logo }),
                 React.createElement(components_1.Text, { style: paragraph }, "Hi there,"),
                 React.createElement(components_1.Text, { style: paragraph },
                     "Welcome to BaiTurgus, the marketplace for high quality digital goods. Use the button below to ",
@@ -82,7 +82,7 @@ var btnContainer = {
 };
 var button = {
     padding: '12px 12px',
-    backgroundColor: '#2563eb',
+    backgroundColor: '#fa60c4',
     borderRadius: '3px',
     color: '#fff',
     fontSize: '16px',
