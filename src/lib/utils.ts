@@ -51,7 +51,7 @@ export function constructMetadata({
       ],
     },
     icons,
-    metadataBase: new URL('https://baiturgus-production.up.railway.app'),
+    metadataBase: new URL('https://baiturgus-production.up.railway.app'), //add real site
     ...(noIndex && {
       robots: {
         index: false,
