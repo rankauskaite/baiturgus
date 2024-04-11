@@ -44,7 +44,7 @@ function constructMetadata(_a) {
                     url: image,
                 },
             ],
-        }, icons: icons, metadataBase: new URL('https://baiturgus-production.up.railway.app') }, (noIndex && {
+        }, icons: icons, metadataBase: new URL('https://baiturgus-rvxc.vercel.app') }, (noIndex && {
         robots: {
             index: false,
             follow: false,
