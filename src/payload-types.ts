@@ -23,7 +23,8 @@ export interface Config {
  * via the `definition` "users".
  */
 export interface User {
-  id: string;
+  id: string; 
+  name: string;
   products?: (string | Product)[] | null;
   product_files?: (string | ProductFile)[] | null;
   role: 'admin' | 'user';
