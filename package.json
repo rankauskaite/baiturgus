@@ -20,7 +20,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
-    "@jest/globals": "^29.7.0",
     "@payloadcms/bundler-webpack": "^1.0.6",
     "@payloadcms/db-mongodb": "^1.4.3",
     "@payloadcms/richtext-slate": "^1.4.0",
@@ -63,6 +62,7 @@
     "@babel/preset-env": "^7.24.4",
     "@babel/preset-flow": "^7.24.1",
     "@babel/preset-react": "^7.24.1",
+    "@jest/globals": "^29.7.0",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.3.0",
     "@testing-library/user-event": "^14.5.2",
