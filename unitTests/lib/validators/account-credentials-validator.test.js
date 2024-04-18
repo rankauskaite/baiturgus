@@ -32,7 +32,7 @@ describe('AuthCredentialsValidator', () => {
       );
     });
 
-    it('should throw error for invalid password (uppercar letter)', () => {
+    it('should throw error for invalid password (uppercase letter)', () => {
         const invalidCredentials = {
           email: 'test@example.com',
           password: 'invalid1!',
