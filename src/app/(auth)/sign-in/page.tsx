@@ -91,6 +91,9 @@ const Page = () => {
                              className={cn({'focus-visible:ring-red-500': errors.password,})} placeholder="Password" />
                              {errors?.password && <p className='text-sm text-red-500'>{errors.password.message}</p>}
                         </div>
+                        <Link href={"/forgot-password"} className='hidden text-right text-sm font-medium text-pink-600 hover:text-pink-500 md:block'>
+                            Forgot password? <span aria-hidden='true'>&rarr;</span>
+                        </Link>
                         <Button>Sign in</Button>
                     </div>
                 </form>
