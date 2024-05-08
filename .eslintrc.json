@@ -1,3 +1,12 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "semi": "warn", // warn about semicolons at the end of statements
+    "no-unused-vars": "warn", // warn about unused variables
+    "quotes": ["warn", "single"], // warn about the use of single quotes for strings
+    "indent": ["warn", 2], // warn about the use of 2 spaces for indentation
+    "arrow-spacing": ["warn", { "before": true, "after": true }], // warn about consistent spacing before and after arrow function's arrow (=>).
+    "object-curly-spacing": ["warn", "always"], // warn about consistent spacing inside braces of object literals.
+    "comma-spacing": ["warn", { "before": false, "after": true }] // warn about consistent spacing after commas.
+  }
 }
