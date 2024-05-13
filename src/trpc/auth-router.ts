@@ -2,8 +2,7 @@ import { AuthCredentialsValidator, EmailValidator } from "../lib/validators/acco
 import { publicProcedure, router } from "./trpc";
 import { getPayloadClient } from "../get-payload";
 import { TRPCError } from "@trpc/server";
-import { string, z } from "zod";
-import payload from "payload";
+import { z } from "zod";
 
 export const authRouter = router({
     createPayloadUser: publicProcedure
