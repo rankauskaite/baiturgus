@@ -50,7 +50,7 @@ const ProductReel = (props: ProductReelProps) => {
                     {subtitle}
                 </p>
                 ) : null}
-                <SearchItems/>
+                {href ? null : <SearchItems/>}
             </div>
 
             {href ? (<Link href={href} className='hidden text-sm font-medium text-pink-600 hover:text-pink-500 md:block'>
