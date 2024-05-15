@@ -5,7 +5,7 @@ import { Button, buttonVariants } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { cn } from "@/lib/utils"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Eye, EyeOff } from "lucide-react"
 import Link from "next/link"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -14,6 +14,7 @@ import { trpc } from "@/trpc/client"
 import { toast } from "sonner"
 import { ZodError } from "zod"
 import { useRouter } from "next/navigation"
+import { useState } from "react"
 
 interface PageProps {
     searchParams: {[key: string]: string }
@@ -21,6 +22,12 @@ interface PageProps {
 
 const Page = ({searchParams}: PageProps) => {
     const toEmail = searchParams.to
+
+    const [showPassword, setShowPassword] = useState(false);
+
+    const revealPassword = () => {
+        setShowPassword((prev) => !prev);
+    };
 
     const { register, handleSubmit, formState: {errors},} = useForm<TAuthCredentialsValidator>({
         resolver: zodResolver(AuthCredentialsValidator),
@@ -83,12 +90,18 @@ const Page = ({searchParams}: PageProps) => {
                             className={cn({ 'focus-visible:ring-red-500': errors.email })} />
                             {errors?.email && <p className='text-sm text-red-500'>{errors.email.message}</p>}
                         </div>
-                        <div className='grid gap-1 py-2'>
-                            <Label htmlFor="password">Password</Label>
-                            <Input {...register("password")}
-                            type="password"
-                             className={cn({'focus-visible:ring-red-500': errors.password,})} placeholder="Password" />
-                             {errors?.password && <p className='text-sm text-red-500'>{errors.password.message}</p>}
+                        <div className='relative grid gap-1 py-2'>
+                            <Label htmlFor='password'>Password</Label>
+                            <Input
+                                {...register('password')}
+                                type={showPassword ? 'text' : 'password'}
+                                className={cn({ 'focus-visible:ring-red-500': errors.password })}
+                                placeholder='Password'
+                            />
+                            {errors?.password && <p className='text-sm text-red-500'>{errors.password.message}</p>}
+                            <div className='absolute w-5 h-5 top-8 right-3 transform translate-y-0.5' onClick={revealPassword}>
+                                {showPassword ? <Eye className='text-pink-500' /> : <EyeOff className='text-pink-400' />}
+                            </div>
                         </div>
                         <Button>Change password</Button>
                     </div>
